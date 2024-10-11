@@ -1,6 +1,6 @@
 <?php
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $firstname = trim($_POST['firstname']);
     $lastname = trim($_POST['lastname']);
@@ -10,8 +10,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $ph_phone_num_pattern = '/^(09\d{9}|(\+639)\d{9})$/';
 
-    // Validate fields
-    if(empty($firstname) || empty($lastname) || empty($age) || empty($contact) || empty($address)){
+
+    if (empty($firstname) || empty($lastname) || empty($age) || empty($contact) || empty($address)) {
         echo "
         <script>
             window.alert('Please fill up all the fields');
@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         exit;
     }
 
-    if(!preg_match($ph_phone_num_pattern, $contact)){
+    if (!preg_match($ph_phone_num_pattern, $contact)) {
         echo "
         <script>
             window.alert('Invalid phone number');
@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         exit;
     }
 
-    // Display result with styling
+
     echo "<!DOCTYPE html>
     <html lang='en'>
     <head>
@@ -68,6 +68,25 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             .result-card strong {
                 color: #333;
             }
+
+            a {
+                text-decoration: none;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            button {
+                background-color: #181938;
+                padding: 0.7rem;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            button:hover {
+                background-color: #3b3c5a;
+            }
         </style>
     </head>
     <body>
@@ -78,6 +97,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             <p><strong>Age:</strong> " . htmlspecialchars($age) . "</p>
             <p><strong>Contact:</strong> " . htmlspecialchars($contact) . "</p>
             <p><strong>Address:</strong> " . htmlspecialchars($address) . "</p>
+            <a href='/registration.php'><button>Return to Registration</button></a>
         </div>
     </body>
     </html>";
