@@ -1,0 +1,97 @@
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+main{
+    background-color: #181938;
+    height: 70%;
+    width: 80%;
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+.title-head{
+    height: 10%;
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-head h1{
+    color: white;
+}
+
+form{
+    height: 90%;
+    width: inherit;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+    margin-top: 5rem;   
+}
+
+.input-row-1, .input-row-2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-row-3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-row-1 input, .input-row-2 input{
+    height: 3rem;
+    width: 100% ;
+    padding-left: 1rem;
+    font-size: 16px;
+}
+
+.input-row-3 input{
+    height: 3rem;
+    padding-left: 1rem;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit input{
+    height: 3rem;
+    width: 15rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: yellow;
+    font-size: 20px;
+}
+
+.submit input:hover {
+    background-color: rgba(255, 255, 0, 0.625);
+}
